@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="sattend.js"></script>   
-        <link href="sattend.css" rel='stylesheet'>
-          
+        <link href="sattend.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>          
                <title>
         Student Attendance Page
     </title>
 </head>
     <body>
-        <header>
-            <h1>STUDENT ATTENDANCE PAGE</h1> 
-        </header>
-        <br>
-        <br>
-        <br>
-        <div id="mypage">
-        <input type="text" id="name" name="name" placeholder="Name">
-        <br>
-        <input autocomplete="off" type="text" id="Roll" name="name" placeholder="Roll Number">
-        <br>
-        <br>
-        <button onclick="attendance()">SUBMIT</button>
-    </div>
+     <div class="box">
+        <form onsubmit="event.preventDefault(); rpage();"> 
+            <h5>Student Attendance Portal </h5>
+            <div class="input-box">
+                <input id="name" type="text" placeholder="Name" required>
+                <i class='bx bxs-user'></i>
+
+            </div>
+            <div class="input-box">
+                <input id ="roll" type="text" pattern="23bcs(0[0-9][0-9]|1[0-3][0-9]|14[0-1])" placeholder="Roll Number" required>
+                <i class='bx bx-data'></i>                
+            </div>
+            <button type="submit" class="btn">Submit</button>
+            <div class="look">
+                <p>Please Enter Roll In Lowercase In Format(23bcs***)</p>
+            </div>
+        </form> 
+
+     </div>
+     <script src="sattend.js"></script>
+
     </body>
 </html>
