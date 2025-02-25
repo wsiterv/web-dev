@@ -1,0 +1,182 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #222;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f8d210;
+    font-weight: bold;
+}
+
+.left {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* About Text */
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Resume Section */
+.resume-section h3 {
+    margin-bottom: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #007BFF, #0056b3);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #003c7c);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links a {
+    font-size: 1.8rem;
+    color: black;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.social-links a[href*="github"]:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+.social-links a[href*="linkedin"]:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+}
+
+.social-links a[href*="mailto"]:hover {
+    color: #d14836;
+    transform: scale(1.2);
+}
+#mail:hover{
+    cursor: pointer;
+    color: #d14836;
+    transform: scale(1.2);
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    iframe {
+        height: 400px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}

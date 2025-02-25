@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #222;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f8d210;
+    font-weight: bold;
+}
+
+.left {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Contact Page Header */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3);
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Button */
+form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #0056b3, #003f7f);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links a {
+    font-size: 1.8rem;
+    color: black;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.social-links a[href*="github"]:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+.social-links a[href*="linkedin"]:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+}
+
+#mail:hover{
+    cursor: pointer;
+    color: #d14836;
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+    .social-links {
+        justify-content: center;
+    }
+
+    form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+}
